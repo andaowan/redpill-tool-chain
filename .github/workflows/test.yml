@@ -24,7 +24,7 @@ jobs:
       matrix:
         include:
           #  两行一组，删除不需要的版本
-          - platform: ds3622xsp
+          - platform: ds2422p
             version: 7.0.1-42218
 
     steps:
@@ -77,7 +77,7 @@ jobs:
           ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-boot-wait.json
           ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-acpid.json
           ./redpill_tool_chain.sh add https://github.com/tossp/redpill-tool-chain/raw/master/extensions/redpill-virtio.json
-          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/ixgbe.vanilla/rpext-index.json
+          ./redpill_tool_chain.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/ixgbe/rpext-index.json
 
       - name: 添加扩展驱动[dva3221]
         if: matrix.platform == 'dva3221'
